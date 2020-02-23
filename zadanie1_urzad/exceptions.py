@@ -1,0 +1,2 @@
+class NoMoreElementsException(Exception):
+    pass

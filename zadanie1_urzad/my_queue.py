@@ -1,3 +1,6 @@
+from zadanie1_urzad.exceptions import NoMoreElementsException
+
+
 class MyQueue:
     def __init__(self):
         self.begin = 0
@@ -11,4 +14,4 @@ class MyQueue:
         if self.begin < self.end:
             self.begin += 1
             return self.begin
-        return None
+        raise NoMoreElementsException("No more elements in this queue")

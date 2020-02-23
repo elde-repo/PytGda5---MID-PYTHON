@@ -1,6 +1,6 @@
-from my_queue import MyQueue
-from user_interface import *
-
+from zadanie1_urzad.exceptions import NoMoreElementsException
+from zadanie1_urzad.my_queue import MyQueue
+from zadanie1_urzad.user_interface import *
 
 queues = {
     "a": MyQueue(),
@@ -24,7 +24,10 @@ if __name__ == "__main__":
             official_welcome()
             officials_choice = choose()
             q = queues[officials_choice]
-            place = q.remove_element()
+            try:
+                place = q.remove_element()
+            except NoMoreElementsException:
+                place = None
             you_are_handling(officials_choice, place)
         else:
             queue_not_found()
