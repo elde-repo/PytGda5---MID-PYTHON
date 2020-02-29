@@ -16,7 +16,7 @@ print('\n', '-' * 100)
 
 print("CYCLE:")
 licz = 10
-for i in cycle("1Ad6"):
+for i in cycle(['xxx', 'yyy', 'json']):
     print(i, end=" ")
     if licz > 0:
         licz -= 1
@@ -65,5 +65,5 @@ print('\n', '-' * 100)
 ############################################
 
 print("TAKEWHILE:")
-for i in takewhile(lambda x: x<5, [1, 4, 6, 4, 1]):
+for i in takewhile(lambda x: x < 5, [1, 4, 6, 2, 3]):
     print(i, end=" ")

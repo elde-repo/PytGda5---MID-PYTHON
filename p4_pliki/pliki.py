@@ -24,6 +24,11 @@ def print_n_lines_2(file_name, lines_number):
             print(f.readline())
 
 
+def find_the_longest_word_2(file_name):
+    with open(file_name, "r") as f:
+        return max(str(f.read()).split(), key=lambda x: len(x))
+
+
 def find_the_longest_word(file_name):
     w = ""
     with open(file_name, "r") as f:
@@ -72,6 +77,7 @@ if __name__ == "__main__":
 
     print_n_lines(F1, 3)
     print("LONGEST WORD: ", find_the_longest_word(F1))
+    print("LONGEST WORD in 3 lines: ", find_the_longest_word_2(F1))
     print(find_freq(F1))
     write_to_file(F2, ['dsadas', 'linia2', 'iweom'])
     copy_content(F1, F2)
