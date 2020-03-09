@@ -9,7 +9,6 @@ def szesciennie(start=0, stop=None):
     number = start
     while True:
         yield number ** 3
-        yield number ** 2
         number += 1
         if stop is not None and number >= stop:
             return
@@ -25,6 +24,6 @@ for i in szesciennie_inf(0):
 print('-' * 50)
 
 for i in szesciennie(0, 12):
-    print(i)
+    print(i+1)
 
 print(type(szesciennie()))

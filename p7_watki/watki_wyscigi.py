@@ -25,14 +25,14 @@ def add_to_resource_blocking(r, l):
 
 def races():
     thr = []
-    # l = threading.Lock()
+    l = threading.Lock()
 
     r = {'resource': 0}
 
     logging.info(f"Main   : przed stworzeniem {HOW_MANY} watkow")
     for i in range(HOW_MANY):
-        thr.append(threading.Thread(target=add_to_resource, args=(r,)))
-        # thr.append(threading.Thread(target=add_to_resource_blocking, args=(r, l)))
+        # thr.append(threading.Thread(target=add_to_resource, args=(r,)))
+        thr.append(threading.Thread(target=add_to_resource_blocking, args=(r, l)))
     logging.info("Main   : przed wystartowaniem watkow")
     for t in thr:
         t.start()

@@ -33,7 +33,7 @@ def take_B_and_then_A(a, b):
 
     # oh... I need A too!
     logging.info(f"W2: o... potrzebuje tez A")
-    b.acquire(blocking=True)
+    a.acquire(blocking=True)
     # do some very complicated operations on the resource A
     hard_operation(how_hard=1)
 

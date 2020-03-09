@@ -4,7 +4,8 @@ import time
 
 def clr():
     # os.system('clear')    # for linux and mac
-    os.system('cls')        # for windows
+    # os.system('cls')        # for windows
+    pass
 
 
 def choose():

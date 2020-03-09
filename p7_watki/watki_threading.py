@@ -23,7 +23,7 @@ def simple_example():
     logging.info("Main   : przed wystartowaniem watku")
     thr.start()
     logging.info("Main   : watek juz ruszyl")
-    # thr.join()
+    thr.join()
     logging.info(f"Main   : skonczone")
 
 
